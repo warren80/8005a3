@@ -1,0 +1,9 @@
+kefile*
+*.o
+*.obj
+*~
+*.files
+*.config
+*.creator
+*.user
+*.includes

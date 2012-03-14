@@ -3,22 +3,14 @@
 
 PMAP hashMap = NULL;
 
-void mapAdd(PMAP pmap);
-PMAP mapFind(int port);
-void mapDelete(PMAP pmap);
-void mapDeleteAll();
-void mapPrint();
-int mapSort(PMAP a, PMAP b);
-void mapSortById();
-
 void mapAdd(PMAP map) {
-    HASH_ADD_INT(hashMap, port, map);
+    HASH_ADD_INT(hashMap, clientPort, map);
 }
 
-PMAP mapFind(int ip) {
+PMAP mapFind(int clientPort) {
     PMAP map;
 
-    HASH_FIND_INT(hashMap, &port, map);  /* s: output pointer */
+    HASH_FIND_INT(hashMap, &clientPort, map);  /* s: output pointer */
     return map;
 }
 
